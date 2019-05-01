@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moving Ghost</title>
+</head>
+<body style="background-color:darkblue">
+    <img id="ghost" style="position:absolute;" height="100" src="ghost3.png">
+    <script>
+        var timer = window.setInterval(moveGhost, 1000);
+        function moveGhost() {
+            document.getElementById("ghost").style.left=Math.random()*900+"px";
+            document.getElementById("ghost").style.top=Math.random()*600+"px";
+        }
+    </script>
+</body>
+</html>
