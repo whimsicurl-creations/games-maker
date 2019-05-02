@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Otto the Octopus</title>
+</head>
+<body style="background-color:cyan">
+    <img id="otto" style="position:absolute; -webkit-transition: all 0.5s;" src="octopus.png" width="100" onmousedown="caughtOtto()">
+    <h3 style="font-family:Arial, Helvetica, sans-serif">See how many times you can tag Otto the Octopus</h3>
+    <p id="scoreText" style="font-family:Arial, Helvetica, sans-serif">Score : 0</p>    
+</body>
+<script>
+    var score = 0;
+    var seconds = 0;
+    var timer = window.setInterval(moveOtto, 1000);
+
+    function moveOtto() {
+        seconds++;
+        document.getElementById("otto").style.left=Math.random()*900+"px";
+        document.getElementById("otto").style.top=Math.random()*700+"px";
+        if (seconds > 30) {
+            clearInterval(timer);
+            alert("You scored: " + score);
+            location.reload();
+        }
+    }
+
+    function caughtOtto() {
+        score++;
+        document.getElementById("scoreText").innerText="Score: " + score;
+    }
+</script>
+</html>
