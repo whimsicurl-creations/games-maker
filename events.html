@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ghost Games</title>
+</head>
+<body style="background-color:darkblue">
+    <!-- <img id="ghost" onclick="hideMe()" src="ghost3.png" height="100px"> -->
+<img id="ghost" onmouseover="runAway()" src="ghost3.png" height="100px" style="position:absolute">
+</body>
+<script>
+    // function hideMe() {
+    //     document.getElementById("ghost").style.display="none";
+    // }
+    function runAway() {
+        document.getElementById("ghost").style.left=Math.random()*900+"px";
+        document.getElementById("ghost").style.top=Math.random()*600+"px";
+    }
+</script>
+</html>
